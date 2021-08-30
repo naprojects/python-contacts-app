@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="col-md-9">
+    <div class="card card-body">
+        <form action="/update/{{ contact.0 }}" class="row row-cols-lg-auto g-3 align-items-center justify-content-center" method="POST">
+            <div class="col-auto">
+                <input type="text" class="form-control" name="fullname" placeholder="Fullname" value="{{ contact.1 }}">
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" name="phone" placeholder="Phone" value="{{ contact.2 }}">
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" name="email" placeholder="Email" value="{{ contact.3 }}">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-success">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock%}
